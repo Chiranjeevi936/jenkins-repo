@@ -1,0 +1,13 @@
+node{
+
+    step("build"){
+
+        print("This is build stage")
+
+    }
+    step("test"){
+        println("This is test stage")
+    }
+
+
+}
