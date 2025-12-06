@@ -1,0 +1,13 @@
+name: CI
+
+services:
+    jenkins_service:
+        image: jenkins/jenkins:2.528.2-lts-jdk21
+        restart: "always"
+        expose:
+            - "8080"
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./data:/var/jenkins_home
+            - ~/.ssh:/var/jenkins_home/.ssh
